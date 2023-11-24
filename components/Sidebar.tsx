@@ -38,7 +38,7 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
   ], [pathname]);
 
   return (
-    <div 
+    <div
       className={twMerge(`
         flex 
         h-full
@@ -46,7 +46,7 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
         player.activeId && 'h-[calc(100%-80px)]'
       )}
     >
-      <div 
+      <div
         className="
           hidden 
           md:flex 
@@ -66,14 +66,15 @@ const Sidebar = ({ children, songs }: SidebarProps) => {
           </div>
         </Box>
         <Box className="overflow-y-auto h-full">
+          song library
           <Library songs={songs} />
         </Box>
       </div>
       <main className="h-full flex-1 overflow-y-auto py-2">
         {children}
       </main>
-    </div>
+    </div >
   );
 }
- 
+
 export default Sidebar;
